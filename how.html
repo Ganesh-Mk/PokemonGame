@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Game - How To Play?</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        user-select: none;
+        font-family: 'Capriola', sans-serif;
+        overflow: hidden;
+    }
+    body {
+        display: flex;
+        width: 200vw;
+        height: 100vh;
+        background: url('./images/bg1.png') no-repeat center/cover;
+    }
+    .howToPlay {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .header {
+        font-size: 3rem;
+        margin-top: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .back-container {
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        margin-top: 3rem;
+    }
+
+    .back {
+        font-size: 1rem;
+        font-weight: bold;
+        padding: .3rem 1rem;
+        border: 2px solid black;
+        text-align: center;
+        border-radius: .3rem;
+        cursor: pointer;
+    }
+
+    .player-container {
+        padding: 0 9rem;
+        display: flex;
+        margin-top: 7rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .keyButtons {
+        width: 4rem;
+        height: 3rem;
+        border: .1rem solid black;
+        border-radius: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .keyButtons p {
+        font-size: .7rem;
+    }
+
+    .topRow {
+        margin-bottom: .5rem;
+    }
+
+    .player1 h1,
+    .player2 h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #ShiftRight {
+        width: 8rem;
+    }
+
+    .pokiImage {
+        width: 12rem;
+        height: 13rem;
+        z-index: 99;
+    }
+
+    .poki-container {
+        width: 100vw;
+        height: 20rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+    }
+</style>
+
+<body>
+    <div class="howToPlay">
+        <div class="header">How To Play?</div>
+        <div class="back-container">
+            <a href="index.html"><button class="back">Go Back</button></a>
+        </div>
+        <div class="player-container">
+            <div class="player1">
+                <h1>Player 1</h1>
+                <div class="keyboard1">
+                    <div class="topRow">
+                        <button class="keyButtons" id="q">Q <p>(Fire)</p></button>
+                        <button class="keyButtons" id="w">W <p>(Jump)</p></button>
+                    </div>
+                    <div>
+                        <button class="keyButtons" id="a">A <p>(Left)</p></button>
+                        <button class="keyButtons" id="s">S <p>(Down)</p></button>
+                        <button class="keyButtons" id="d">D <p>(Right)</p></button>
+                        <button class="keyButtons" id="f">F <p>(Fire)</p></button>
+                    </div>
+                </div>
+            </div>
+            <div class="player2">
+                <h1>Player 2</h1>
+                <div class="keyboard2">
+                    <div class="topRow">
+                        <button id="ShiftRight" class="keyButtons">Shift <p>(Fire)</p></button>
+                        <button id="ArrowUp" class="keyButtons">^<p>(Jump)</p></button>
+                    </div>
+                    <div>
+                        <button class="keyButtons" id="ControlRight">ctrl <p>(Fire)</p></button>
+                        <button class="keyButtons" id="ArrowLeft">
+                            <<p>(Left)</p>
+                        </button>
+                        <button class="keyButtons" id="ArrowDown">v <p>(Down)</p></button>
+                        <button class="keyButtons" id="ArrowRight">> <p>(Right)</p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector('.back').addEventListener('click', () => {
+        document.querySelector('.howToPlay').style.display = "none";
+        document.querySelector('.loginPage').style.display = "grid";
+    })
+    let keyButtons = document.querySelectorAll('.keyButtons');
+    keyButtons.forEach((btn) => {
+        document.addEventListener('keyup', (button) => {
+            if (button.code == "ShiftRight" || button.code == "ControlRight") {
+                document.getElementById(`${button.code}`).style.border = "none"
+                setTimeout(() => {
+                    document.getElementById(`${button.code}`).style.border = "2px solid black"
+                }, 300);
+            }
+            else {
+                document.getElementById(`${button.key}`).style.border = "none"
+                setTimeout(() => {
+                    document.getElementById(`${button.key}`).style.border = "2px solid black"
+                }, 300);
+            }
+        })
+    })
+</script>
+
+</html>
