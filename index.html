@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokemon Game</title>
+</head>
+
+<body>
+    </div>
+    <div class="loginPage">
+        <h1 class="gameH1">Pokemon Game</h1>
+        <div class="container">
+            <img id="firstPoki" src="./Sprites/charmander (1).gif" alt="">
+            <div class="options">
+                <button class="optionBtns" name="PvP">Start</button>
+                <input class="optionBtns" id="p1Name" type="text" placeholder="Enter Player 1 Name">
+                <input class="optionBtns" id="p2Name" type="text" placeholder="Enter Player 2 Name">
+                <a href="how.html" class="optionBtns" name="how">How to play?</a>
+                <button class="optionBtns" name="exit">Exit</button>
+            </div>
+            <img id="secondPoki" src="./Sprites/pikachu.gif" alt="">
+        </div>
+    </div>
+    <div class="main">
+        <div class="nav">
+            <div>
+                <div class="p1NameInNav">Pokemon 1</div>
+                <div class="p1Health">
+                    <div class="p1HealthRange"></div>
+                </div>
+            </div>
+            <div class="vs"></div>
+            <div>
+                <div class="p2NameInNav">Pokemon 2</div>
+                <div class="p2Health">
+                    <div class="p2HealthRange"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gameOver-container">
+            <span class="gameOver">GAME OVER</span>
+            <span class="restart">Restart</span>
+        </div>
+        <div class="ground">
+            <div class="p1">
+                <div class="p1Name">Pokemon 1</div>
+                <img class="pImage p1Image" src="./Sprites/charmander (1).gif" alt="">
+            </div>
+
+            <div class="p2">
+                <div class="p2Name">Pokemon 2</div>
+                <img class="pImage p2Image" src="./Sprites/pikachu.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>

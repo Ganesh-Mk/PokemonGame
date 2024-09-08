@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Capriola', sans-serif;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    width: 200vw;
+    height: 100vh;
+    background: url('./images/bg1.png') no-repeat center/cover;
+}
+
+.loginPage{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    border: 1px solid black;
+    padding: 0 3rem 5rem 3rem;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loginPage h1{
+    font-size: 3rem;
+}
+
+.optionBtns::placeholder{
+    color: black;
+}
+.optionBtns:hover{
+    background: white;
+}
+
+
+#firstPoki,
+#secondPoki{
+    height: auto;
+    width: 13rem;
+    margin-top: 18rem;
+}
+
+#firstPoki{
+    margin-right: 10rem;
+}
+#secondPoki{
+    margin-left: 10rem;
+    
+}
+
+.gameH1{
+    margin-top: 5rem;
+}
+
+.options{
+    display: grid;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.optionBtns{
+    font-size: 1.3rem;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    text-align: center;
+    border-radius: .6rem;
+    backdrop-filter: blur(25px);
+    cursor: pointer;
+    padding: .5rem 1rem;
+}
+
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 0%;
+    transition: 1s ease-in-out;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+}
+
+.vs {
+    height: 10rem;
+    width: 10rem;
+    background: url('/images/vs-letters-versus-png.webp') no-repeat center/cover;
+}
+
+.p1Health,
+.p2Health {
+    width: 20rem;
+    border: 1px solid black;
+    border-radius: 100rem;
+}
+
+.p1HealthRange,
+.p2HealthRange {
+    height: 1rem;
+    background: red;
+    border-radius: 100rem;
+}
+
+.p1HealthRange {
+    width: 20rem;
+}
+
+.p2HealthRange {
+    width: 20rem;
+}
+
+.p2NameInNav {
+    text-align: right;
+}
+
+.p1NameInNav,
+.p2NameInNav {
+    font-size: 1.5rem;
+}
+
+
+
+
+.ground {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    padding: 0 15rem;
+    justify-content: space-between;
+}
+
+
+.p1,
+.p2 {
+    margin-top: auto;
+    position: relative;
+    left: 0;
+    transition: all .2s ease-in-out;
+}
+
+.p1 {
+    z-index: 10;
+}
+
+.p2 {
+    z-index: 7;
+}
+
+.p1Name,
+.p2Name {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.pImage {
+    height: auto;
+    width: 12rem;
+}
+
+
+
+.fireRight,
+.fireLeft {
+    position: absolute;
+    display: block;
+    width: 5rem;
+    height: 1rem;
+}
+
+.fireRight {
+    position: absolute;
+    width: 5rem;
+    height: 1rem;
+    background-color: yellow;
+    border: 2px solid black;        
+    border-radius: 90%;
+    display: none;
+    transition: 2s ease-in;
+}
+
+.fireLeft {
+    position: absolute;
+    width: 5rem;
+    height: 1rem;
+    border: 2px solid black;        
+    border-radius: 90%;
+    background-color: red;
+    display: none;
+    transition: 2s ease-in;
+}
+
+.gameOver{
+    display: none;
+    position: absolute;
+    font-size: 5rem;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+.restart{
+    display: none;
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: 50%;
+    padding: .2rem 1rem;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.sit {
+    animation: sitAnime 1s ease-in-out 1;
+}
+
+.jump {
+    animation: jumpAnime 1s ease-in-out 1;
+}
+
+@keyframes jumpAnime {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 10rem;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+@keyframes sitAnime {
+    0% {
+        height: auto;
+    }
+
+    1% {
+        height: 10rem;
+    }
+
+    50% {
+        height: 5rem;
+    }
+
+    99% {
+        height: 10rem;
+    }
+
+    100% {
+        height: auto;
+    }
+}
