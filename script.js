@@ -16,6 +16,24 @@ let getDamage;
 let scoreP1 = 20;
 let scoreP2 = 20;
 
+function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+}
+// Show the message if the user is on mobile
+window.onload = function () {
+  const main = document.querySelector(".main");
+  const loginPage = document.querySelector(".loginPage");
+  const mobileWarning = document.querySelector(".mobileWarning");
+
+  if (isMobile()) {
+    mobileWarning.style.display = "block";
+    main.style.display = "none";
+    loginPage.style.display = "none";
+  } else {
+    mobileWarning.style.display = "none";
+  }
+};
+
 loginPage();
 function loginPage() {
   let options = document.querySelectorAll(".optionBtns");
