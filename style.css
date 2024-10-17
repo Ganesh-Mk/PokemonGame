@@ -89,6 +89,22 @@ body{
     cursor: pointer;
     padding: .5rem 1rem;
 }
+.nameInput{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    text-align: center;
+    border-radius: .6rem;
+    backdrop-filter: blur(25px);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: .5rem 1rem;
+}
+.nameInput::placeholder{
+    color: black;
+}
 
 
 .main {
@@ -190,29 +206,25 @@ body{
 .fireLeft {
     position: absolute;
     display: block;
-    width: 5rem;
-    height: 1rem;
+    width: 10rem;
+    height: 10rem;
 }
 
 .fireRight {
     position: absolute;
-    width: 5rem;
-    height: 1rem;
-    background-color: yellow;
-    border: 2px solid black;        
-    border-radius: 90%;
+    width: 10rem;
+    height: 3rem;
     display: none;
+    background: url(./images/redFire.png) no-repeat center/cover;
     transition: 2s ease-in;
 }
 
 .fireLeft {
     position: absolute;
-    width: 5rem;
-    height: 1rem;
-    border: 2px solid black;        
-    border-radius: 90%;
-    background-color: red;
+    width: 10rem;
+    height: 3rem;
     display: none;
+    background: url(./images/leftToRightFire.png) no-repeat center/cover;
     transition: 2s ease-in;
 }
 

@@ -91,7 +91,6 @@ function initialization() {
 movement();
 function movement() {
   document.addEventListener("keyup", (button) => {
-    console.log("Applied keys");
     if (button.key == "w" && !isJumpingP1) {
       isJumpingP1 = true;
       p1.classList.add("jump");
